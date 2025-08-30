@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Lung Knowledge Atlas</title>
+  <meta name="description" content="Lung Knowledge & Diseases — PWA-ready single project (20 diseases)"/>
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b1220"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6232723421189435"
+     crossorigin="anonymous"></script>
+<style>
+    :root{
+      --bg:#071428; --card:#0b1220; --muted:#b6c2e2; --text:#e9eefb; --primary:#7aa2ff; --accent:#7df0d1;
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
+    body{
+      background: linear-gradient(180deg,#071428 0%, #0b1220 100%);
+      color:var(--text); padding:14px;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    .container{max-width:1100px;margin:0 auto;}
+    header{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+    .logo{width:54px;height:54px;border-radius:12px;display:grid;place-items:center;background:conic-gradient(from 180deg,#7aa2ff,#7df0d1,#ffd166);}
+    h1{font-size:20px;margin:0}
+    .subtitle{font-size:13px;color:var(--muted)}
+    .panel{background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.04); padding:12px; border-radius:20px; box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    .controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .search{flex:1;position:relative}
+    .search input{width:100%;padding:12px 44px;border-radius:14px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.03);color:var(--text);font-size:15px}
+    .btn{border-radius:12px;padding:10px 14px;border:2px solid currentColor;background:transparent;cursor:pointer;font-weight:700}
+    .btn-primary{color:var(--primary)} .btn-accent{color:var(--accent)} .btn-danger{color:#ff6b6b}
+    .chip{display:inline-block;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.07);color:var(--muted);cursor:pointer;margin:6px 6px 0 0}
+    .chip.active{background:var(--accent);color:#071428;border-color:var(--accent)}
+    .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));margin-top:12px}
+    .card{background:rgba(255,255,255,0.02);padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,0.04)}
+    .card h3{margin:0 0 6px 0}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:8px}
+    .pill{display:inline-block;font-size:12px;padding:6px 8px;border-radius:999px;border:1px solid rgba(255,255,255,0.06);color:var(--muted);margin:4px 4px 0 0}
+    details summary{cursor:pointer;list-style:none;outline:none}
+    .footer{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}
+    /* responsive */
+    @media (max-width:640px){ .controls{flex-direction:column} .grid{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo" aria-hidden="true">
+        <!-- simple lungs glyph -->
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2s-1 1.2-1 3v4.5c0 .8-.7 1.5-1.5 1.5H7" stroke="#071428" stroke-width="0.6" fill="#fff"/>
+          <path d="M12 2s1 1.2 1 3v4.5c0 .8.7 1.5 1.5 1.5H17" stroke="#071428" stroke-width="0.6" fill="#fff"/>
+        </svg>
+      </div>
+      <div>
+        <h1>Lung Knowledge Atlas</h1>
+        <div class="subtitle">20 diseases • Search • Symptom matcher • PWA-ready</div>
+      </div>
+    </header>
+
+    <div class="panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div class="search" style="flex:1">
+          <input id="search" placeholder="Search diseases or symptoms (e.g., asthma, cough, hemoptysis)" aria-label="Search"/>
+        </div>
+        <div style="display:flex;gap:8px;flex-shrink:0">
+          <button class="btn btn-primary" id="exportBtn">Export JSON</button>
+          <button class="btn btn-accent" id="copyBtn">Quick Notes</button>
+        </div>
+      </div>
+
+      <div style="margin-top:10px">
+        <div id="categoryChips" aria-label="category filters"></div>
+      </div>
+    </div>
+
+    <section class="panel" style="margin-top:12px">
+      <h2 style="margin:0 0 8px 0">Symptom Matcher</h2>
+      <div id="symptomBox" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="matchBtn">Match Diseases</button>
+        <button class="btn" id="resetSymptoms">Reset</button>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-top:12px">
+      <h2 style="margin:0 0 8px 0">Diseases</h2>
+      <div id="resultMeta" class="meta">Loading…</div>
+      <div id="cards" class="grid"></div>
+    </section>
+
+    <div class="footer">Educational only. Not a substitute for medical advice.</div>
+  </div>
+
+<script>
+  // Data & state
+  const CATEGORIES = ['Obstructive','Infectious','Restrictive/Interstitial','Vascular','Pleural','Neoplastic','Pediatric','Occupational','Autoimmune','Other'];
+  const SYMPTOMS = ['cough','chronic cough','productive cough','dry cough','wheeze','shortness of breath','dyspnea','chest pain','pleuritic chest pain','fever','chills','night sweats','hemoptysis','weight loss','fatigue','tachypnea','cyanosis','exercise intolerance','chest tightness','orthopnea','leg swelling','syncope','clubbing'];
+  const DISEASES = [
+    {name:'Asthma',category:'Obstructive',overview:'Chronic airway inflammation with variable reversible airflow limitation.',keySymptoms:['wheeze','cough','shortness of breath','chest tightness','night cough'],causes:['Allergens','viral infections','exercise'],diagnostics:['Spirometry with bronchodilator reversibility','Peak flow variability'],treatment:['SABA reliever','ICS controller','Avoid triggers'],redFlags:['Silent chest','O₂ sat <90%']},
+    {name:'Chronic Obstructive Pulmonary Disease (COPD)',category:'Obstructive',overview:'Progressive airflow limitation due to chronic bronchitis or emphysema.',keySymptoms:['chronic cough','productive cough','dyspnea','wheeze'],causes:['Smoking','biomass exposure','alpha-1 antitrypsin deficiency'],diagnostics:['Post-bronchodilator FEV1/FVC <0.70','Chest CT'],treatment:['Smoking cessation','LABA/LAMA bronchodilators','Pulmonary rehab'],redFlags:['Acute hypercapnic respiratory failure']},
+    {name:'Pneumonia (Community-Acquired)',category:'Infectious',overview:'Infection of lung parenchyma causing consolidation.',keySymptoms:['fever','productive cough','pleuritic chest pain','dyspnea'],causes:['S. pneumoniae, viruses, atypicals'],diagnostics:['Chest X-ray consolidation','Sputum culture'],treatment:['Empiric antibiotics','Supportive care'],redFlags:['Hypoxemia','Sepsis']},
+    {name:'Tuberculosis (Pulmonary TB)',category:'Infectious',overview:'Mycobacterium tuberculosis infection with chronic cough and systemic symptoms.',keySymptoms:['chronic cough','fever','night sweats','weight loss','hemoptysis'],causes:['Airborne transmission'],diagnostics:['Sputum PCR/culture','Chest X-ray cavitation'],treatment:['Multi-drug anti-TB regimens'],redFlags:['Massive hemoptysis']},
+    {name:'Lung Cancer',category:'Neoplastic',overview:'Malignant tumors of lung — NSCLC & SCLC.',keySymptoms:['persistent cough','hemoptysis','weight loss'],causes:['Smoking','radon','asbestos'],diagnostics:['CT chest','Biopsy and molecular testing'],treatment:['Surgery, chemo, immunotherapy'],redFlags:['SVC syndrome','Spinal cord compression']},
+    {name:'Pulmonary Embolism (PE)',category:'Vascular',overview:'Acute blockage of pulmonary artery by thrombus.',keySymptoms:['sudden dyspnea','pleuritic chest pain','tachycardia','hemoptysis'],causes:['DVT, immobility, cancer'],diagnostics:['D-dimer, CTPA, V/Q scan'],treatment:['Anticoagulation, thrombolysis if massive'],redFlags:['Hypotension, right heart strain']},
+    {name:'Pulmonary Hypertension',category:'Vascular',overview:'Raised pulmonary arterial pressure from various causes.',keySymptoms:['exertional dyspnea','syncope','fatigue'],causes:['Left heart disease','CTEPH','idiopathic PAH'],diagnostics:['Echocardiography, right heart cath'],treatment:['Treat cause, PAH-specific therapy'],redFlags:['Right heart failure']},
+    {name:'Interstitial Lung Disease (IPF)',category:'Restrictive/Interstitial',overview:'Chronic fibrosing lung disease with progressive dyspnea.',keySymptoms:['progressive dyspnea','dry cough','clubbing'],causes:['Idiopathic, drug-related, autoimmune'],diagnostics:['HRCT with UIP pattern','PFTs restrictive'],treatment:['Antifibrotics, transplant evaluation'],redFlags:['Acute exacerbation']},
+    {name:'Bronchiectasis',category:'Obstructive',overview:'Permanent bronchial dilatation → recurrent infections & sputum.',keySymptoms:['chronic productive cough','recurrent infections','hemoptysis'],causes:['Post-infectious, CF, immune deficiency'],diagnostics:['HRCT showing bronchial dilation'],treatment:['Airway clearance, antibiotics'],redFlags:['Massive hemoptysis']},
+    {name:'Pleural Effusion',category:'Pleural',overview:'Fluid accumulation in pleural space (transudate vs exudate).',keySymptoms:['dyspnea','pleuritic chest pain'],causes:['Heart failure, pneumonia, malignancy, TB'],diagnostics:['CXR/US, thoracentesis (Light’s criteria)'],treatment:['Drainage, treat cause'],redFlags:['Large effusion causing compromise']},
+    {name:'Pneumothorax',category:'Pleural',overview:'Air in pleural space leading to lung collapse.',keySymptoms:['sudden chest pain','acute dyspnea'],causes:['spontaneous bleb rupture, trauma'],diagnostics:['CXR/US'],treatment:['Observation, aspiration, chest tube'],redFlags:['Tension pneumothorax — emergency']},
+    {name:'Sarcoidosis',category:'Autoimmune',overview:'Multisystem granulomatous disease often affecting lungs.',keySymptoms:['dry cough','dyspnea','chest discomfort'],causes:['Immune dysregulation (unknown trigger)'],diagnostics:['BHL on CXR, non-caseating granulomas on biopsy'],treatment:['Observe if mild, corticosteroids if symptomatic'],redFlags:['Severe organ involvement']},
+    {name:'Occupational Pneumoconiosis',category:'Occupational',overview:'Lung disease from mineral dust exposure (silica, asbestos, coal).',keySymptoms:['progressive dyspnea','cough'],causes:['Workplace dust exposure'],diagnostics:['Exposure history, imaging'],treatment:['Avoid exposure, supportive care'],redFlags:['Progressive massive fibrosis']},
+    {name:'Pulmonary Edema (Cardiogenic)',category:'Vascular',overview:'Fluid in alveoli due to left heart failure or other causes.',keySymptoms:['acute dyspnea','orthopnea','frothy sputum'],causes:['LV failure, MI'],diagnostics:['CXR, BNP, echo'],treatment:['Diuretics, oxygen, treat cardiac cause'],redFlags:['Severe hypoxemia']},
+    {name:'ARDS',category:'Other',overview:'Severe inflammatory lung injury producing diffuse alveolar damage and hypoxemia.',keySymptoms:['severe dyspnea','tachypnea','hypoxemia'],causes:['Sepsis, pneumonia, aspiration'],diagnostics:['Berlin criteria, CXR bilateral opacities'],treatment:['Lung protective ventilation, prone positioning'],redFlags:['Refractory hypoxemia']},
+    {name:'Cystic Fibrosis',category:'Pediatric',overview:'Inherited CFTR disorder causing thick secretions, infections & bronchiectasis.',keySymptoms:['chronic productive cough','failure to thrive'],causes:['CFTR mutations'],diagnostics:['Sweat chloride, genetic testing'],treatment:['Airway clearance, modulators where eligible'],redFlags:['Bronchiectasis with severe infection']},
+    {name:'Pulmonary Fibrosis',category:'Restrictive/Interstitial',overview:'Progressive scarring of lung interstitium (may overlap IPF).',keySymptoms:['exertional dyspnea','dry cough'],causes:['idiopathic, connective tissue disease'],diagnostics:['HRCT, PFTs'],treatment:['Antifibrotics, oxygen'],redFlags:['End-stage respiratory failure']},
+    {name:'Hypersensitivity Pneumonitis',category:'Restrictive/Interstitial',overview:'Immune mediated lung disease due to inhaled antigens (birds, molds).',keySymptoms:['cough','dyspnea','fever (acute)'],causes:['organic dusts, occupational exposure'],diagnostics:['Exposure history, HRCT, BAL lymphocytosis'],treatment:['Antigen avoidance, steroids'],redFlags:['Chronic fibrotic change']},
+    {name:'Respiratory Failure',category:'Other',overview:'Failure of gas exchange (hypoxemic or hypercapnic).',keySymptoms:['severe dyspnea','confusion','cyanosis'],causes:['ARDS, COPD exacerbation, neuromuscular disease'],diagnostics:['ABG, pulse ox'],treatment:['Oxygen, ventilation, treat cause'],redFlags:['Cardiac arrest']},
+    {name:'Sleep Apnea',category:'Other',overview:'Repetitive cessation of breathing during sleep (OSA central types).',keySymptoms:['loud snoring','daytime sleepiness','morning headache'],causes:['obesity, airway anatomy'],diagnostics:['Polysomnography (sleep study)'],treatment:['CPAP, weight loss, surgery in selected'],redFlags:['Severe cardiovascular complications']}
+  ];
+
+  let state = { q:'', categories: new Set(), selectedSymptoms: new Set(), filtered: [] };
+
+  // Build UI chips & symptoms
+  const catBox = document.getElementById('categoryChips');
+  CATEGORIES.forEach(cat=>{
+    const el = document.createElement('div');
+    el.className='chip'; el.textContent=cat;
+    el.addEventListener('click', ()=>{ el.classList.toggle('active'); toggleCategory(cat); render(); });
+    catBox.appendChild(el);
+  });
+
+  const symptomBox = document.getElementById('symptomBox');
+  SYMPTOMS.forEach(s=>{
+    const el = document.createElement('div'); el.className='chip'; el.textContent=s;
+    el.addEventListener('click', ()=>{ el.classList.toggle('active'); if(el.classList.contains('active')) state.selectedSymptoms.add(s); else state.selectedSymptoms.delete(s); });
+    symptomBox.appendChild(el);
+  });
+
+  // Search & buttons
+  document.getElementById('search').addEventListener('input', e=>{ state.q = e.target.value.trim().toLowerCase(); render(); });
+  document.getElementById('exportBtn').addEventListener('click', exportResults);
+  document.getElementById('copyBtn').addEventListener('click', copyQuickNotes);
+  document.getElementById('matchBtn').addEventListener('click', ()=>render(true));
+  document.getElementById('resetSymptoms').addEventListener('click', ()=>{ state.selectedSymptoms.clear(); document.querySelectorAll('#symptomBox .chip').forEach(c=>c.classList.remove('active')); render(); });
+
+  function toggleCategory(cat){ if(state.categories.has(cat)) state.categories.delete(cat); else state.categories.add(cat); }
+
+  function matchesQuery(d){
+    if(!state.q) return true;
+    const text = [d.name,d.category,d.overview,...(d.keySymptoms||[]),...(d.causes||[]),(d.diagnostics||[]||[]),(d.treatment||[]||[])].join(' ').toLowerCase();
+    return text.includes(state.q);
+  }
+  function matchesCategory(d){ if(state.categories.size===0) return true; return state.categories.has(d.category); }
+  function matchesSymptoms(d, strict=false){
+    if(state.selectedSymptoms.size===0) return true;
+    const set = new Set((d.keySymptoms||[]).map(s=>s.toLowerCase()));
+    const sel = [...state.selectedSymptoms];
+    if(strict) return sel.every(s=> set.has(s.toLowerCase()));
+    return sel.some(s=> set.has(s.toLowerCase()));
+  }
+
+  function render(strict=false){
+    const cards = document.getElementById('cards');
+    const meta = document.getElementById('resultMeta');
+    const res = DISEASES.filter(d=> matchesQuery(d) && matchesCategory(d) && matchesSymptoms(d, strict));
+    state.filtered = res;
+    meta.textContent = `${res.length} result${res.length!==1?'s':''} — ${state.categories.size? 'category filter; ' : ''}${state.selectedSymptoms.size? (strict? 'strict symptom match' : 'loose symptom match') : 'use search or filters'}`;
+    cards.innerHTML='';
+    if(res.length===0){ cards.innerHTML = `<div class="meta">No results. Try clearing filters.</div>`; return; }
+    res.forEach(d=> cards.appendChild(makeCard(d)));
+  }
+
+  function pill(text){
+    const s = document.createElement('span'); s.className='pill'; s.textContent = text; return s;
+  }
+
+  function makeCard(d){
+    const c = document.createElement('article'); c.className='card';
+    const head = document.createElement('div'); head.style.display='flex'; head.style.justifyContent='space-between'; head.style.alignItems='center';
+    const left = document.createElement('div');
+    const h = document.createElement('h3'); h.textContent = d.name; left.appendChild(h);
+    const cat = document.createElement('div'); cat.className='meta'; cat.textContent = d.category; left.appendChild(cat);
+    head.append(left);
+    const quick = document.createElement('button'); quick.className='btn'; quick.textContent='Copy Summary';
+    quick.addEventListener('click', (e)=>{ e.stopPropagation(); const txt = `${d.name} — ${d.overview}\nSymptoms: ${(d.keySymptoms||[]).join(', ')}\nDx: ${(d.diagnostics||[]).join('; ')}\nTx: ${(d.treatment||[]).join('; ')}`; navigator.clipboard.writeText(txt).then(()=>{ quick.textContent='Copied!'; setTimeout(()=> quick.textContent='Copy Summary',1200); }); });
+    head.append(quick);
+    c.appendChild(head);
+    const ov = document.createElement('div'); ov.className='meta'; ov.textContent = d.overview; c.appendChild(ov);
+    const details = document.createElement('div'); details.style.marginTop='8px';
+    const mk = (title, arr)=>{ const det = document.createElement('details'); const s = document.createElement('summary'); s.innerHTML = `<strong>${title}</strong>`; det.appendChild(s); const b = document.createElement('div'); b.style.marginTop='8px'; if(Array.isArray(arr)) arr.forEach(x=> b.appendChild(pill(x))); else b.textContent = arr; det.appendChild(b); return det; };
+    details.appendChild(mk('Key Symptoms', d.keySymptoms));
+    details.appendChild(mk('Causes / Risks', d.causes));
+    details.appendChild(mk('Diagnostics', d.diagnostics || []));
+    details.appendChild(mk('Treatment', d.treatment || []));
+    details.appendChild(mk('Red Flags', d.redFlags || d.redflags || []));
+    c.appendChild(details);
+    return c;
+  }
+
+  function exportResults(){
+    const blob = new Blob([JSON.stringify(state.filtered.length?state.filtered:DISEASES, null, 2)], {type:'application/json'});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'lung-diseases-results.json'; a.click(); URL.revokeObjectURL(a.href);
+  }
+  function copyQuickNotes(){ const txt = (DISEASES.map(d=> `${d.name}: ${d.overview}`).join('\\n')); navigator.clipboard.writeText(txt); alert('Summary copied to clipboard'); }
+
+  // first render
+  render();
+
+  // Register service worker for PWA (only works when served over https or localhost)
+  if('serviceWorker' in navigator){
+    window.addEventListener('load', ()=> {
+      navigator.serviceWorker.register('service-worker.js').then(reg=>{
+        console.log('SW registered', reg.scope);
+      }).catch(err=> console.warn('SW register failed:', err));
+    });
+  }
+</script>
+</body>
+</html>
