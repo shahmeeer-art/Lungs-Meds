@@ -1,235 +1,622 @@
-<!DOCTYPE html>
+      <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lung Diseases Atlas</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: linear-gradient(to right, #e0f7fa, #80deea);
-      color: #333;
-    }
-    header {
-      background: #006064;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-    .container {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .disease {
-      background: #fff;
-      margin: 15px 0;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .disease:hover {
-      transform: scale(1.02);
-    }
-    h2 {
-      color: #004d40;
-    }
-    h3 {
-      margin-top: 10px;
-      color: #00796b;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #004d40;
-      color: #fff;
-      margin-top: 20px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lungs Atlas + Diseases Info</title>
+<style>
+body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; color:#333;}
+header {background:#2c3e50; color:white; padding:20px; text-align:center;}
+h1,h2,h3 {margin:10px 0;}
+nav {display:flex; flex-wrap:wrap; justify-content:center; gap:10px; background:#34495e; padding:10px;}
+nav a {color:white; text-decoration:none; padding:8px 15px; border-radius:8px; transition:0.3s;}
+nav a:hover {background:#3498db;}
+section {padding:20px;}
+.grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px;}
+.card {background:white; padding:20px; border-radius:15px; box-shadow:0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;}
+.card:hover {transform:translateY(-5px);}
+.btn {display:inline-block; margin-top:10px; padding:10px 20px; border:2px solid #3498db; color:#3498db; border-radius:10px; text-decoration:none; cursor:pointer; transition: all 0.3s;}
+.btn:hover {background:#3498db; color:white; transform:scale(1.05);}
+footer {text-align:center; padding:20px; background:#2c3e50; color:white; margin-top:20px;}
+table {width:100%; border-collapse:collapse;}
+th, td {padding:10px; border:1px solid #ccc; text-align:left;}
+tr:hover {background:#f1f1f1;}
+</style>
+
+<!-- AdSense Header Script -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6232723421189435" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>Lung Diseases Atlas (32 Diseases)</header>
-  <div class="container">
 
-    <!-- Disease 1 -->
-    <div class="disease">
-      <h2>1. Asthma</h2>
-      <h3>Anatomy:</h3>
-      <p>Bronchi and bronchioles narrow due to inflammation.</p>
-      <h3>Symptoms:</h3>
-      <p>Shortness of breath, wheezing, coughing.</p>
-      <h3>Causes:</h3>
-      <p>Allergens, cold air, respiratory infections.</p>
-      <h3>Treatment:</h3>
-      <p>Inhalers, bronchodilators, avoiding triggers.</p>
+<header>
+<h1>Lungs Atlas + Diseases Info</h1>
+<p>Your Complete Lung Health Resource</p>
+</header>
+
+<nav>
+<a href="#home">Home / Diseases</a>
+<a href="#anatomy">Lungs Anatomy</a>
+<a href="#match-disease">Match Your Disease</a>
+<a href="#health-tips">Health Tips</a>
+<a href="#faq">FAQs</a>
+<a href="#blog">Blog</a>
+</nav>
+
+<!-- Home / Diseases Section -->
+<section id="home">
+<h2>Common Lung Diseases (1–40)</h2>
+<div class="grid">
+<!-- Example Diseases -->
+<div class="card">
+<h3>Asthma</h3>
+<p>Asthma is a chronic inflammatory disease of the airways causing wheezing, coughing, and difficulty breathing. Triggers include allergens, exercise, and respiratory infections. Diagnosis involves lung function tests. Treatment: inhalers, corticosteroids, bronchodilators. Lifestyle management is important.</p>
+</div>
+<div class="card">
+<h3>Pneumonia</h3>
+<p>Pneumonia is a lung infection causing inflamed air sacs filled with fluid/pus. Causes: bacteria, viruses, fungi. Symptoms: cough, fever, shortness of breath. Treatment: antibiotics, antivirals, supportive care. Prevention: vaccines, hygiene, avoid smoking.</p>
+</div>
+<!-- Add remaining diseases 3–40 similarly -->
+</div>
+  <section id="diseases-31-40">
+    <h2>Common Lung Diseases (Part 4)</h2>
+    <div class="grid">
+<section id="diseases-21-30">
+    <h2>Common Lung Diseases (Part 3)</h2>
+    <div class="grid">
+<section id="diseases-11-20">
+    <h2>Common Lung Diseases (Part 2)</h2>
+    <div class="grid">
+<section id="diseases">
+    <h2>Common Lung Diseases</h2>
+    <div class="grid">
+
+        <!-- Disease 1: Asthma -->
+        <div class="card">
+            <h3>Asthma</h3>
+            <p>Asthma is a chronic lung disease that causes the airways to become inflamed and narrowed. Symptoms include wheezing, shortness of breath, chest tightness, and coughing, often worse at night or early morning. Triggers can include allergens like pollen, dust mites, mold, pet dander, or irritants such as smoke, pollution, strong odors, and respiratory infections.</p>
+            <p>Causes of asthma involve genetic factors, environmental exposures, and sometimes early childhood respiratory infections. People with a family history of asthma or allergies are more prone to developing it.</p>
+            <p>Diagnosis involves medical history review, lung function tests (spirometry), and sometimes allergy tests. Treatment includes quick-relief inhalers for acute attacks and long-term control medications like inhaled corticosteroids. Lifestyle adjustments and avoiding triggers are crucial for management.</p>
+            <p>Prevention includes reducing exposure to allergens and irritants, maintaining a healthy diet, exercising appropriately, and following an asthma action plan. Education on proper inhaler use is vital. With proper care, individuals with asthma can lead active, normal lives.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 2: Bronchitis -->
+        <div class="card">
+            <h3>Bronchitis</h3>
+            <p>Bronchitis is the inflammation of the bronchial tubes that carry air to and from the lungs. Acute bronchitis often follows a cold or respiratory infection, whereas chronic bronchitis is a long-term condition, usually caused by smoking or repeated exposure to irritants like chemical fumes or dust.</p>
+            <p>Symptoms include persistent cough, mucus production, fatigue, shortness of breath, and sometimes mild fever. Chronic bronchitis is part of Chronic Obstructive Pulmonary Disease (COPD).</p>
+            <p>Treatment for acute bronchitis focuses on symptom relief, such as rest, fluids, and sometimes cough medications. Chronic bronchitis treatment includes bronchodilators, steroids, oxygen therapy, and lifestyle changes, especially smoking cessation.</p>
+            <p>Prevention involves avoiding smoking and polluted areas, wearing masks if necessary, getting vaccinated for flu and pneumonia, and maintaining overall lung health. Early detection and management improve quality of life.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 3: Lung Cancer -->
+        <div class="card">
+            <h3>Lung Cancer</h3>
+            <p>Lung cancer is the uncontrolled growth of abnormal cells in one or both lungs. Smoking is the primary risk factor, but exposure to radon, asbestos, and air pollution can also contribute. Symptoms include a persistent cough, chest pain, shortness of breath, coughing up blood, fatigue, and unexplained weight loss.</p>
+            <p>There are two main types: non-small cell lung cancer (NSCLC) and small cell lung cancer (SCLC). Diagnosis involves imaging (X-rays, CT scans), biopsies, and lab tests to determine cancer type and stage.</p>
+            <p>Treatment options depend on cancer type, stage, and overall health. They include surgery, chemotherapy, radiotherapy, targeted therapy, and immunotherapy. Early-stage lung cancer has better prognosis, emphasizing the importance of early detection.</p>
+            <p>Prevention focuses on avoiding smoking, limiting exposure to harmful chemicals, maintaining a healthy lifestyle, and regular health checkups. Awareness of symptoms can lead to earlier diagnosis and improved outcomes.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 4: Pneumonia -->
+        <div class="card">
+            <h3>Pneumonia</h3>
+            <p>Pneumonia is an infection that inflames the air sacs in the lungs, which may fill with fluid or pus. It can be caused by bacteria, viruses, or fungi. Symptoms include cough with phlegm, fever, chills, difficulty breathing, fatigue, and chest pain.</p>
+            <p>Risk factors include age (very young or elderly), chronic diseases, weakened immune system, and smoking. Diagnosis involves chest X-rays, blood tests, and sometimes sputum cultures.</p>
+            <p>Treatment depends on the cause. Bacterial pneumonia requires antibiotics, viral pneumonia may need supportive care, and fungal pneumonia requires antifungal medications. Hospitalization may be necessary in severe cases.</p>
+            <p>Prevention includes vaccinations (like pneumococcal and flu vaccines), good hygiene, avoiding smoking, and maintaining a healthy lifestyle. Early treatment reduces complications and improves recovery.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 5: Emphysema -->
+        <div class="card">
+            <h3>Emphysema</h3>
+            <p>Emphysema is a chronic lung disease characterized by damage to the air sacs (alveoli) in the lungs, leading to shortness of breath. It is most commonly caused by smoking and long-term exposure to air pollutants. Symptoms include breathlessness, chronic cough, wheezing, and fatigue.</p>
+            <p>Diagnosis is made using lung function tests, imaging like chest X-rays or CT scans, and medical history assessment. Treatment focuses on slowing disease progression, relieving symptoms, and improving quality of life.</p>
+            <p>Treatment includes bronchodilators, inhaled steroids, pulmonary rehabilitation, oxygen therapy, and lifestyle changes such as quitting smoking. In advanced cases, surgery or lung transplant may be considered.</p>
+            <p>Prevention primarily involves avoiding smoking, minimizing exposure to pollutants, and maintaining lung health through regular exercise and vaccination against respiratory infections.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 6: Chronic Obstructive Pulmonary Disease (COPD) -->
+        <div class="card">
+            <h3>Chronic Obstructive Pulmonary Disease (COPD)</h3>
+            <p>COPD is a progressive lung disease that makes breathing difficult. It includes emphysema and chronic bronchitis. Symptoms include chronic cough, excessive mucus, wheezing, shortness of breath, and fatigue. Smoking is the leading cause, though long-term exposure to air pollutants and occupational dust also contribute.</p>
+            <p>Diagnosis involves medical history review, physical examination, spirometry, and imaging tests. Treatment cannot cure COPD but can slow progression and relieve symptoms.</p>
+            <p>Treatment includes medications like bronchodilators, corticosteroids, pulmonary rehabilitation, oxygen therapy, and lifestyle changes. Avoiding smoking and pollutants is essential.</p>
+            <p>Prevention focuses on quitting smoking, avoiding environmental irritants, vaccination, and regular medical checkups to manage early symptoms.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 7: Tuberculosis (TB) -->
+        <div class="card">
+            <h3>Tuberculosis (TB)</h3>
+            <p>Tuberculosis is a contagious bacterial infection caused by Mycobacterium tuberculosis. It primarily affects the lungs but can involve other organs. Symptoms include persistent cough, fever, night sweats, weight loss, and fatigue.</p>
+            <p>Risk factors include weakened immune systems, close contact with infected individuals, and living in crowded areas. Diagnosis is done through chest X-rays, sputum tests, and sometimes skin or blood tests.</p>
+            <p>Treatment involves a combination of antibiotics taken for 6–9 months. Adherence to the full course is crucial to prevent drug-resistant TB. Hospitalization may be required in severe cases.</p>
+            <p>Prevention includes vaccination (BCG vaccine), early detection, avoiding close contact with TB patients, maintaining hygiene, and a healthy lifestyle to strengthen immunity.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 8: Pulmonary Fibrosis -->
+        <div class="card">
+            <h3>Pulmonary Fibrosis</h3>
+            <p>Pulmonary fibrosis is a condition in which lung tissue becomes damaged and scarred, making it difficult for the lungs to function properly. Symptoms include shortness of breath, dry cough, fatigue, unexplained weight loss, and aching muscles or joints.</p>
+            <p>Causes may include environmental exposures (dust, pollutants), certain medications, radiation therapy, autoimmune diseases, or idiopathic origins where the cause is unknown. Diagnosis requires imaging, lung function tests, and sometimes lung biopsy.</p>
+            <p>Treatment aims to slow disease progression and manage symptoms. Options include medications like antifibrotic drugs, oxygen therapy, pulmonary rehabilitation, and in severe cases, lung transplantation.</p>
+            <p>Prevention is limited for idiopathic cases but avoiding smoking, pollutants, and regular medical checkups can reduce risk. Early detection is crucial for better outcomes.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 9: Pulmonary Embolism -->
+        <div class="card">
+            <h3>Pulmonary Embolism</h3>
+            <p>Pulmonary embolism occurs when a blood clot travels to the lungs, blocking blood flow. It can be life-threatening and requires immediate medical attention. Symptoms include sudden shortness of breath, chest pain, coughing blood, rapid heartbeat, and dizziness.</p>
+            <p>Risk factors include prolonged immobility, recent surgery, obesity, smoking, and certain medical conditions that increase clotting risk. Diagnosis involves imaging (CT pulmonary angiography), blood tests (D-dimer), and sometimes ultrasound of leg veins.</p>
+            <p>Treatment focuses on dissolving or preventing further clots using anticoagulants, thrombolytic therapy, or surgery in severe cases. Long-term care may include lifestyle changes and monitoring.</p>
+            <p>Prevention includes staying active, maintaining a healthy weight, avoiding smoking, using compression stockings if at risk, and following medical advice after surgery or during prolonged immobility.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 10: Sleep Apnea -->
+        <div class="card">
+            <h3>Sleep Apnea</h3>
+            <p>Sleep apnea is a disorder where breathing repeatedly stops and starts during sleep. There are two main types: obstructive sleep apnea (OSA) caused by blocked airways, and central sleep apnea (CSA) caused by brain signal issues. Symptoms include loud snoring, daytime fatigue, morning headaches, difficulty concentrating, and restless sleep.</p>
+            <p>Risk factors include obesity, large neck circumference, age, gender (more common in men), family history, and alcohol or sedative use. Diagnosis involves sleep studies that monitor breathing, oxygen levels, and heart rate during sleep.</p>
+            <p>Treatment depends on severity. Mild cases may benefit from lifestyle changes such as weight loss and positional therapy. Moderate to severe cases often require CPAP (Continuous Positive Airway Pressure) machines, dental devices, or surgery to remove airway obstructions.</p>
+            <p>Prevention includes maintaining a healthy weight, avoiding alcohol and sedatives before bed, sleeping on the side, and managing underlying medical conditions like high blood pressure or diabetes. Proper management improves sleep quality and reduces complications like heart disease.</p>
+            <button class="btn">Read More</button>
+        </div>
+
     </div>
+  </section>
+        <!-- Disease 11: Cystic Fibrosis -->
+        <div class="card">
+            <h3>Cystic Fibrosis</h3>
+            <p>Cystic Fibrosis (CF) is a genetic disorder that primarily affects the lungs and digestive system. It causes thick, sticky mucus buildup in the lungs, which leads to frequent infections, lung damage, and difficulty breathing. The mucus can also block the pancreas, preventing digestive enzymes from reaching the intestines and affecting nutrient absorption.</p>
+            <p>Symptoms include persistent coughing, frequent lung infections, wheezing, shortness of breath, salty-tasting skin, poor growth, and greasy stools. CF is caused by mutations in the CFTR gene, inherited from both parents. Diagnosis involves genetic testing, sweat tests, and evaluation of respiratory and digestive health.</p>
+            <p>Treatment focuses on managing symptoms and slowing disease progression. This includes airway clearance techniques, inhaled medications, antibiotics for infections, pancreatic enzyme supplements, nutritional support, and regular exercise. In some severe cases, lung transplantation may be necessary.</p>
+            <p>Prevention is not possible due to its genetic nature, but early detection, specialized care, and adherence to treatment plans improve life expectancy and quality of life for patients. Regular follow-up with a CF specialist is essential for monitoring lung function and managing complications.</p>
+            <button class="btn">Read More</button>
+        </div>
 
-    <!-- Disease 2 -->
-    <div class="disease">
-      <h2>2. Chronic Obstructive Pulmonary Disease (COPD)</h2>
-      <h3>Anatomy:</h3>
-      <p>Damage to alveoli and bronchioles reduces airflow.</p>
-      <h3>Symptoms:</h3>
-      <p>Chronic cough, sputum, breathing difficulty.</p>
-      <h3>Causes:</h3>
-      <p>Smoking, pollution, occupational hazards.</p>
-      <h3>Treatment:</h3>
-      <p>Bronchodilators, oxygen therapy.</p>
+        <!-- Disease 12: Interstitial Lung Disease (ILD) -->
+        <div class="card">
+            <h3>Interstitial Lung Disease (ILD)</h3>
+            <p>Interstitial Lung Disease is a group of disorders that cause progressive scarring of lung tissue. This scarring stiffens the lungs, making it difficult to breathe and get enough oxygen into the bloodstream. Causes include long-term exposure to hazardous materials, autoimmune diseases, infections, medications, and idiopathic forms where the cause is unknown.</p>
+            <p>Symptoms include shortness of breath, chronic dry cough, fatigue, unexplained weight loss, and sometimes clubbing of fingers. Diagnosis requires imaging such as high-resolution CT scans, pulmonary function tests, and sometimes lung biopsy.</p>
+            <p>Treatment focuses on slowing the progression of fibrosis and managing symptoms. Options include medications such as antifibrotic drugs, corticosteroids, oxygen therapy, pulmonary rehabilitation, and in advanced cases, lung transplantation.</p>
+            <p>Prevention involves avoiding exposure to environmental toxins, following safety measures in workplaces, and managing underlying autoimmune conditions. Early detection improves prognosis and enhances quality of life.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 13: Acute Respiratory Distress Syndrome (ARDS) -->
+        <div class="card">
+            <h3>Acute Respiratory Distress Syndrome (ARDS)</h3>
+            <p>ARDS is a life-threatening lung condition that occurs when fluid leaks into the lungs, making breathing extremely difficult. It can result from severe infections, trauma, inhalation injuries, or complications of pneumonia or sepsis. ARDS often requires intensive medical care.</p>
+            <p>Symptoms include severe shortness of breath, rapid breathing, low blood oxygen levels, confusion, and fatigue. Diagnosis involves imaging, blood tests, and clinical evaluation of oxygenation status.</p>
+            <p>Treatment focuses on supporting breathing with mechanical ventilation, addressing the underlying cause, managing fluids, and providing supportive care. Medications may include antibiotics for infections and sometimes corticosteroids.</p>
+            <p>Prevention includes early treatment of infections, careful monitoring in intensive care settings, and protective strategies in high-risk patients. Rapid medical attention is critical for improving survival rates and recovery outcomes.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 14: Pulmonary Hypertension -->
+        <div class="card">
+            <h3>Pulmonary Hypertension</h3>
+            <p>Pulmonary hypertension is a condition in which the blood pressure in the arteries of the lungs becomes abnormally high. This forces the right side of the heart to work harder, leading to heart strain and potentially heart failure. Causes include heart disease, lung disease, chronic blood clots, and in some cases, it is idiopathic.</p>
+            <p>Symptoms include shortness of breath during activity, fatigue, chest pain, palpitations, swelling in ankles or legs, and dizziness. Diagnosis requires echocardiography, right heart catheterization, and sometimes imaging tests.</p>
+            <p>Treatment aims to reduce symptoms, improve quality of life, and slow disease progression. Options include medications such as vasodilators, endothelin receptor antagonists, phosphodiesterase inhibitors, oxygen therapy, and in severe cases, lung transplantation.</p>
+            <p>Prevention involves managing underlying diseases, avoiding risk factors like smoking, and routine monitoring for early detection. Lifestyle changes and adherence to treatment plans are crucial for improving outcomes.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 15: Sarcoidosis -->
+        <div class="card">
+            <h3>Sarcoidosis</h3>
+            <p>Sarcoidosis is an inflammatory disease that affects multiple organs, most commonly the lungs and lymph glands. It causes small clusters of inflammatory cells called granulomas to form, which can interfere with normal organ function. The exact cause is unknown, but it may involve immune system dysfunction triggered by environmental or genetic factors.</p>
+            <p>Symptoms include persistent dry cough, shortness of breath, fatigue, chest pain, skin rashes, and swollen lymph nodes. Diagnosis involves imaging, biopsy of affected tissue, and lab tests to rule out other conditions.</p>
+            <p>Treatment depends on severity. Mild cases may resolve without treatment, while moderate to severe cases may require corticosteroids or immunosuppressive medications. Regular monitoring is essential to manage complications.</p>
+            <p>Prevention is not currently possible due to unknown causes. Early detection, symptom management, and regular follow-ups improve patient outcomes and help prevent organ damage.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 16: Occupational Lung Disease -->
+        <div class="card">
+            <h3>Occupational Lung Disease</h3>
+            <p>Occupational lung diseases are caused by exposure to harmful substances in the workplace, such as asbestos, silica, coal dust, or chemical fumes. Examples include asbestosis, silicosis, coal worker’s pneumoconiosis, and chemical-induced asthma. Symptoms depend on the type of exposure but often include chronic cough, shortness of breath, and fatigue.</p>
+            <p>Diagnosis requires occupational history, imaging tests, lung function tests, and sometimes tissue biopsy. Early recognition is key to prevent irreversible lung damage.</p>
+            <p>Treatment focuses on symptom relief, avoiding further exposure, medications like bronchodilators, corticosteroids, and in severe cases, oxygen therapy or lung transplantation.</p>
+            <p>Prevention is critical: use protective gear, follow workplace safety protocols, and undergo regular health screenings. Awareness and adherence to safety standards significantly reduce risk.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 17: Acute Bronchiolitis -->
+        <div class="card">
+            <h3>Acute Bronchiolitis</h3>
+            <p>Acute bronchiolitis is a common lung infection in young children, primarily caused by the respiratory syncytial virus (RSV). It leads to inflammation of the small airways (bronchioles) in the lungs, causing difficulty breathing. Symptoms include rapid breathing, wheezing, persistent cough, fever, and sometimes dehydration.</p>
+            <p>Diagnosis involves clinical evaluation, oxygen saturation monitoring, and sometimes chest X-rays. Most cases are mild and resolve with supportive care.</p>
+            <p>Treatment includes hydration, oxygen therapy if needed, suctioning mucus, and careful monitoring. Severe cases may require hospitalization and mechanical ventilation.</p>
+            <p>Prevention involves practicing good hygiene, avoiding exposure to sick individuals, breastfeeding for immunity support, and RSV vaccination where available. Early intervention ensures better outcomes for affected children.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 18: Pleural Effusion -->
+        <div class="card">
+            <h3>Pleural Effusion</h3>
+            <p>Pleural effusion is the accumulation of excess fluid between the layers of the pleura, the membranes surrounding the lungs. Causes include infections, heart failure, liver or kidney disease, and malignancies. Symptoms include shortness of breath, chest pain, cough, and difficulty lying down.</p>
+            <p>Diagnosis involves physical examination, imaging tests like chest X-ray or ultrasound, and analysis of pleural fluid obtained via thoracentesis.</p>
+            <p>Treatment depends on the underlying cause: antibiotics for infections, diuretics for heart failure, drainage for large effusions, and sometimes surgery. Managing the primary condition is crucial for preventing recurrence.</p>
+            <p>Prevention involves controlling underlying diseases, monitoring health regularly, and seeking prompt medical attention for respiratory symptoms. Early treatment reduces complications and improves lung function.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 19: Pneumothorax -->
+        <div class="card">
+            <h3>Pneumothorax</h3>
+            <p>Pneumothorax is the presence of air in the pleural space, causing the lung to collapse partially or completely. It can occur spontaneously, due to trauma, or as a complication of lung disease. Symptoms include sudden chest pain, shortness of breath, rapid heart rate, and cyanosis in severe cases.</p>
+            <p>Diagnosis involves chest X-rays or CT scans to confirm lung collapse. Severity dictates treatment approach.</p>
+            <p>Treatment includes observation for small pneumothorax, oxygen therapy, needle aspiration, chest tube insertion, or surgery for recurrent or severe cases. Prompt treatment is critical to prevent respiratory distress.</p>
+            <p>Prevention includes avoiding smoking, managing underlying lung conditions, and taking precautions to reduce risk of trauma or barotrauma. Awareness of symptoms ensures timely intervention.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 20: Respiratory Syncytial Virus (RSV) Infection -->
+        <div class="card">
+            <h3>Respiratory Syncytial Virus (RSV) Infection</h3>
+            <p>RSV is a viral infection that primarily affects the respiratory tract of infants and young children. It can cause bronchiolitis and pneumonia, leading to wheezing, cough, fever, and difficulty breathing. Adults can also get RSV, typically with milder symptoms.</p>
+            <p>Diagnosis involves clinical examination and lab tests such as PCR or antigen tests. Severe cases require hospitalization, especially in infants or immunocompromised individuals.</p>
+            <p>Treatment is mainly supportive: oxygen therapy, fluids, suctioning mucus, and monitoring for complications. Antiviral medications are rarely used and reserved for high-risk cases.</p>
+            <p>Prevention includes good hand hygiene, avoiding exposure to infected individuals, breastfeeding for immune support, and prophylactic antibodies for high-risk infants. Early detection and care reduce complications and hospitalization rates.</p>
+            <button class="btn">Read More</button>
+        </div>
+
     </div>
+          </section>
+        <!-- Disease 21: Chronic Cough -->
+        <div class="card">
+            <h3>Chronic Cough</h3>
+            <p>A chronic cough is defined as a cough lasting more than eight weeks in adults or four weeks in children. It can result from smoking, asthma, post-nasal drip, chronic bronchitis, gastroesophageal reflux disease (GERD), or medications such as ACE inhibitors. Symptoms include persistent coughing, throat irritation, fatigue, and sometimes chest discomfort.</p>
+            <p>Diagnosis requires a detailed history, physical examination, imaging like chest X-rays, and sometimes pulmonary function tests. Treating the underlying cause is key.</p>
+            <p>Treatment may involve quitting smoking, medications for reflux, inhalers for asthma, antibiotics if infection is present, and cough suppressants for symptomatic relief. Lifestyle modifications, including hydration and avoiding irritants, are helpful.</p>
+            <p>Prevention includes avoiding smoking, controlling allergies and reflux, regular checkups, and early evaluation of persistent cough to prevent complications and improve lung health.</p>
+            <button class="btn">Read More</button>
+        </div>
 
-    <!-- Disease 3 -->
-    <div class="disease">
-      <h2>3. Lung Cancer</h2>
-      <h3>Anatomy:</h3>
-      <p>Malignant growth in lung tissues or bronchi.</p>
-      <h3>Symptoms:</h3>
-      <p>Persistent cough, chest pain, weight loss.</p>
-      <h3>Causes:</h3>
-      <p>Smoking, genetic mutations, pollution.</p>
-      <h3>Treatment:</h3>
-      <p>Surgery, chemotherapy, radiation.</p>
+        <!-- Disease 22: Occupational Asthma -->
+        <div class="card">
+            <h3>Occupational Asthma</h3>
+            <p>Occupational asthma is caused by exposure to irritants or allergens in the workplace, such as chemical fumes, dust, mold, or gases. Symptoms include wheezing, shortness of breath, chest tightness, and cough that often improve when away from the work environment.</p>
+            <p>Diagnosis requires detailed occupational history, lung function tests, and sometimes allergy testing. Identifying the trigger is crucial for management.</p>
+            <p>Treatment involves avoiding exposure, using medications like inhalers and corticosteroids, and sometimes relocation to a safer environment. Pulmonary rehabilitation and education on workplace safety help manage the condition.</p>
+            <p>Prevention includes proper ventilation, wearing protective gear, regular workplace safety checks, and early reporting of respiratory symptoms to reduce the risk of chronic complications.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 23: Silicosis -->
+        <div class="card">
+            <h3>Silicosis</h3>
+            <p>Silicosis is a lung disease caused by inhaling fine silica dust, common in mining, construction, and sandblasting jobs. It leads to inflammation and scarring of lung tissue, resulting in difficulty breathing, persistent cough, fatigue, and increased susceptibility to infections.</p>
+            <p>Diagnosis involves occupational history, imaging tests like chest X-rays or CT scans, and lung function evaluation. The disease is progressive, even after exposure stops.</p>
+            <p>Treatment focuses on symptom management, medications to treat infections, oxygen therapy, and pulmonary rehabilitation. Severe cases may require lung transplantation.</p>
+            <p>Prevention includes strict workplace safety measures, using respirators, proper ventilation, health surveillance, and minimizing dust exposure to protect lung health.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 24: Asbestosis -->
+        <div class="card">
+            <h3>Asbestosis</h3>
+            <p>Asbestosis is caused by long-term inhalation of asbestos fibers, leading to lung scarring and stiffness. It increases the risk of lung cancer and mesothelioma. Symptoms include shortness of breath, persistent cough, chest tightness, and fatigue.</p>
+            <p>Diagnosis requires occupational history, imaging (X-ray or CT scan), and lung function tests. The disease is progressive and irreversible.</p>
+            <p>Treatment focuses on symptom relief, oxygen therapy, pulmonary rehabilitation, and avoiding further asbestos exposure. Medications may include corticosteroids to reduce inflammation.</p>
+            <p>Prevention involves avoiding asbestos exposure, following safety regulations, wearing protective equipment, and regular health checkups for early detection and management.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 25: Lymphangioleiomyomatosis (LAM) -->
+        <div class="card">
+            <h3>Lymphangioleiomyomatosis (LAM)</h3>
+            <p>LAM is a rare lung disease affecting mostly women of childbearing age. It causes abnormal growth of smooth muscle cells in the lungs, leading to cyst formation, lung collapse, and progressive respiratory failure. Symptoms include shortness of breath, chronic cough, chest pain, fatigue, and sometimes pneumothorax.</p>
+            <p>Diagnosis involves imaging (high-resolution CT scan), lung function tests, and sometimes tissue biopsy. Monitoring is crucial for managing disease progression.</p>
+            <p>Treatment includes medications such as mTOR inhibitors to slow disease progression, oxygen therapy, pulmonary rehabilitation, and lung transplantation in severe cases.</p>
+            <p>Prevention is not possible due to its genetic and idiopathic nature. Regular follow-ups, symptom management, and early intervention improve quality of life.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 26: Goodpasture Syndrome -->
+        <div class="card">
+            <h3>Goodpasture Syndrome</h3>
+            <p>Goodpasture Syndrome is an autoimmune disease where antibodies attack the lungs and kidneys, causing bleeding in the lungs and kidney failure. Symptoms include coughing up blood, shortness of breath, fatigue, and swelling in extremities.</p>
+            <p>Diagnosis involves blood tests for anti-glomerular basement membrane antibodies, imaging, and sometimes kidney or lung biopsy. Early diagnosis is critical to prevent organ damage.</p>
+            <p>Treatment includes immunosuppressive medications, plasma exchange to remove harmful antibodies, and supportive care for kidney and lung function.</p>
+            <p>Prevention is not possible due to autoimmune nature, but early detection and prompt treatment improve survival and organ function outcomes.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 27: Wegener’s Granulomatosis (GPA) -->
+        <div class="card">
+            <h3>Wegener’s Granulomatosis (GPA)</h3>
+            <p>Granulomatosis with polyangiitis (GPA) is a rare autoimmune disease causing inflammation of blood vessels in the lungs, kidneys, and upper respiratory tract. Symptoms include persistent sinus infections, cough, shortness of breath, chest pain, and kidney problems.</p>
+            <p>Diagnosis involves blood tests, imaging, and tissue biopsy. Early detection is crucial to prevent organ damage.</p>
+            <p>Treatment involves immunosuppressive drugs like corticosteroids and cyclophosphamide to control inflammation, and sometimes biologics for refractory cases.</p>
+            <p>Prevention is not possible due to autoimmune nature, but monitoring and early treatment reduce complications and improve survival.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 28: Wegener’s Granulomatosis (GPA) -->
+        <div class="card">
+            <h3>Alpha-1 Antitrypsin Deficiency</h3>
+            <p>Alpha-1 Antitrypsin Deficiency is a genetic disorder affecting the lungs and liver. The lack of alpha-1 antitrypsin protein leads to lung tissue damage, causing emphysema, and liver disease. Symptoms include shortness of breath, chronic cough, wheezing, and fatigue.</p>
+            <p>Diagnosis involves genetic testing, blood tests for protein levels, and imaging. Early diagnosis allows interventions to prevent lung and liver complications.</p>
+            <p>Treatment includes augmentation therapy to replace missing protein, medications for symptoms, oxygen therapy, lifestyle changes, and in severe cases, lung or liver transplantation.</p>
+            <p>Prevention is not possible due to genetics, but avoiding smoking, regular medical care, and lifestyle management reduce disease progression and improve quality of life.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 29: Pulmonary Langerhans Cell Histiocytosis (PLCH) -->
+        <div class="card">
+            <h3>Pulmonary Langerhans Cell Histiocytosis (PLCH)</h3>
+            <p>PLCH is a rare lung disease involving abnormal proliferation of Langerhans cells, often affecting young adults and associated with smoking. Symptoms include persistent cough, shortness of breath, chest pain, and sometimes pneumothorax.</p>
+            <p>Diagnosis involves imaging, lung biopsy, and pulmonary function tests. Smoking cessation is critical for treatment.</p>
+            <p>Treatment includes stopping smoking, medications to reduce inflammation, oxygen therapy, and monitoring for complications. Severe cases may require lung transplantation.</p>
+            <p>Prevention focuses on avoiding smoking and early evaluation of respiratory symptoms. Proper medical care reduces disease progression and complications.</p>
+            <button class="btn">Read More</button>
+        </div>
+
+        <!-- Disease 30: Hypersensitivity Pneumonitis -->
+        <div class="card">
+            <h3>Hypersensitivity Pneumonitis</h3>
+            <p>Hypersensitivity Pneumonitis (HP) is an inflammatory lung disease caused by repeated exposure to allergens such as mold, bird droppings, or chemicals. It leads to scarring and reduced lung function. Symptoms include cough, shortness of breath, fever, and fatigue.</p>
+            <p>Diagnosis requires detailed exposure history, imaging, lung function tests, and sometimes biopsy. Early detection is crucial for preventing permanent lung damage.</p>
+            <p>Treatment involves avoiding exposure, using corticosteroids for inflammation, oxygen therapy if needed, and supportive care. Long-term monitoring helps manage complications.</p>
+            <p>Prevention focuses on minimizing exposure to known allergens, workplace safety, proper ventilation, and regular medical checkups. Early intervention improves prognosis and quality of life.</p>
+            <button class="btn">Read More</button>
+        </div>
+
     </div>
+</section>
+        <!-- Disease 31: Pulmonary Alveolar Proteinosis -->
+        <div class="card">
+            <h3>Pulmonary Alveolar Proteinosis</h3>
+            <p>Pulmonary Alveolar Proteinosis (PAP) is a rare lung disease where abnormal accumulation of surfactant occurs in the alveoli, leading to impaired gas exchange. Symptoms include shortness of breath, cough, fatigue, and sometimes fever. PAP can be autoimmune, secondary to other diseases, or congenital.</p>
+            <p>Diagnosis involves imaging like CT scan showing characteristic patterns, bronchoscopy with bronchoalveolar lavage, and lung function tests. Early diagnosis is crucial for effective management.</p>
+            <p>Treatment includes whole-lung lavage to remove excess surfactant, medications such as GM-CSF therapy, and supportive care like oxygen therapy. Monitoring for infections and respiratory function is important.</p>
+            <p>Prevention is limited due to unknown causes in many cases. Avoiding environmental triggers and maintaining good health can help reduce complications. Early intervention improves quality of life and survival.</p>
+            <button class="btn">Read More</button>
+        </div>
 
-    <!-- Disease 4 -->
-    <div class="disease">
-      <h2>4. Pulmonary Embolism</h2>
-      <h3>Anatomy:</h3>
-      <p>Blockage in pulmonary arteries by a blood clot.</p>
-      <h3>Symptoms:</h3>
-      <p>Sudden chest pain, shortness of breath.</p>
-      <h3>Causes:</h3>
-      <p>Deep vein thrombosis, immobility.</p>
-      <h3>Treatment:</h3>
-      <p>Anticoagulants, thrombolytic therapy.</p>
-    </div>
+        <!-- Disease 32: Acute Epiglottitis -->
+        <div class="card">
+            <h3>Acute Epiglottitis</h3>
+            <p>Acute epiglottitis is a potentially life-threatening infection causing inflammation of the epiglottis, which can block the airway. It is usually caused by bacterial infection, most commonly Haemophilus influenzae type B (Hib). Symptoms include severe sore throat, difficulty swallowing, drooling, stridor, and fever.</p>
+            <p>Diagnosis is based on clinical examination, imaging if needed, and sometimes direct visualization of the epiglottis. Immediate medical attention is essential.</p>
+            <p>Treatment involves airway management, antibiotics to treat infection, and supportive care in a hospital setting. Severe cases may require intubation or tracheostomy.</p>
+            <p>Prevention includes vaccination against Hib, early recognition of symptoms, and prompt medical treatment to prevent respiratory failure and complications.</p>
+            <button class="btn">Read More</button>
+        </div>
 
-    <!-- Disease 5 -->
-    <div class="disease">
-      <h2>5. Cystic Fibrosis</h2>
-      <h3>Anatomy:</h3>
-      <p>Thick mucus blocks bronchi and alveoli.</p>
-      <h3>Symptoms:</h3>
-      <p>Frequent lung infections, breathing issues.</p>
-      <h3>Causes:</h3>
-      <p>Genetic mutation in CFTR gene.</p>
-      <h3>Treatment:</h3>
-      <p>Airway clearance, antibiotics.</p>
-    </div>
+        <!-- Disease 33: Bronchiectasis -->
+        <div class="card">
+            <h3>Bronchiectasis</h3>
+            <p>Bronchiectasis is a chronic condition where the walls of the bronchi are thickened due to inflammation and infection. This leads to mucus accumulation, frequent lung infections, persistent cough, and shortness of breath. Causes include repeated infections, cystic fibrosis, immune deficiencies, and obstruction of airways.</p>
+            <p>Diagnosis involves chest CT scans, sputum cultures, and pulmonary function tests. Early diagnosis helps prevent further lung damage.</p>
+            <p>Treatment includes airway clearance techniques, antibiotics for infections, bronchodilators, and sometimes surgery in localized cases. Vaccinations and pulmonary rehabilitation are also recommended.</p>
+            <p>Prevention involves vaccination, good hygiene, avoiding smoking, early treatment of infections, and managing underlying health conditions to reduce disease progression.</p>
+            <button class="btn">Read More</button>
+        </div>
 
-    <!-- Disease 6 -->
-    <div class="disease">
-      <h2>6. Interstitial Lung Disease</h2>
-      <h3>Anatomy:</h3>
-      <p>Scarring in alveolar walls reduces oxygen exchange.</p>
-      <h3>Symptoms:</h3>
-      <p>Dry cough, shortness of breath.</p>
-      <h3>Causes:</h3>
-      <p>Autoimmune diseases, toxins.</p>
-      <h3>Treatment:</h3>
-      <p>Anti-inflammatory drugs, oxygen therapy.</p>
-    </div>
+        <!-- Disease 34: Acute Lung Injury (ALI) -->
+        <div class="card">
+            <h3>Acute Lung Injury (ALI)</h3>
+            <p>Acute Lung Injury is a severe condition where the lungs sustain sudden damage, leading to inflammation, fluid accumulation, and impaired oxygenation. Causes include sepsis, trauma, pneumonia, or inhalation of harmful substances. Symptoms include rapid breathing, low oxygen levels, shortness of breath, and confusion.</p>
+            <p>Diagnosis involves arterial blood gas analysis, imaging, and clinical evaluation. Early recognition is vital for effective treatment.</p>
+            <p>Treatment focuses on supportive care with oxygen therapy or mechanical ventilation, treating the underlying cause, and monitoring vital signs. Medications may include antibiotics and anti-inflammatory drugs.</p>
+            <p>Prevention includes timely treatment of infections, avoiding harmful exposures, and monitoring high-risk patients in ICU settings to prevent complications and improve survival.</p>
+            <button class="btn">Read More</button>
+        </div>
 
-    <!-- Disease 7 -->
-    <div class="disease">
-      <h2>7. Pleural Effusion</h2>
-      <h3>Anatomy:</h3>
-      <p>Excess fluid builds in pleural space around lungs.</p>
-      <h3>Symptoms:</h3>
-      <p>Chest pain, cough, difficulty breathing.</p>
-      <h3>Causes:</h3>
-      <p>Heart failure, pneumonia.</p>
-      <h3>Treatment:</h3>
-      <p>Drainage, treating cause.</p>
-    </div>
+        <!-- Disease 35: Pulmonary Edema -->
+        <div class="card">
+            <h3>Pulmonary Edema</h3>
+            <p>Pulmonary edema occurs when fluid accumulates in the alveoli, making it difficult for oxygen to reach the bloodstream. It can result from heart failure, kidney failure, high altitude, or severe infections. Symptoms include shortness of breath, coughing up pink frothy sputum, fatigue, and anxiety.</p>
+            <p>Diagnosis is made through clinical evaluation, chest X-rays, echocardiography, and blood tests. Prompt recognition is essential to prevent respiratory failure.</p>
+            <p>Treatment focuses on addressing the underlying cause, using diuretics, oxygen therapy, medications for heart function, and sometimes mechanical ventilation in severe cases.</p>
+            <p>Prevention involves managing heart disease, controlling blood pressure, avoiding fluid overload, and regular health monitoring to reduce the risk of pulmonary edema and improve outcomes.</p>
+            <button class="btn">Read More</button>
+        </div>
 
-    <!-- Disease 8 -->
-    <div class="disease">
-      <h2>8. Sarcoidosis</h2>
-      <h3>Anatomy:</h3>
-      <p>Granulomas form in lung tissue.</p>
-      <h3>Symptoms:</h3>
-      <p>Cough, fatigue, chest discomfort.</p>
-      <h3>Causes:</h3>
-      <p>Immune system overreaction.</p>
-      <h3>Treatment:</h3>
-      <p>Corticosteroids, immunosuppressants.</p>
-    </div>
+        <!-- Disease 36: Pulmonary Embolism (Recurrent) -->
+        <div class="card">
+            <h3>Pulmonary Embolism (Recurrent)</h3>
+            <p>Recurrent pulmonary embolism occurs when multiple blood clots repeatedly block pulmonary arteries, leading to breathing difficulties and potential heart strain. Causes include genetic clotting disorders, prolonged immobility, surgery, and certain medications. Symptoms include sudden shortness of breath, chest pain, coughing blood, and rapid heartbeat.</p>
+            <p>Diagnosis involves imaging like CT pulmonary angiography, D-dimer blood tests, and ultrasound of leg veins to detect clots. Early diagnosis is critical to prevent life-threatening complications.</p>
+            <p>Treatment involves anticoagulants, thrombolytic therapy, filters in the vena cava for high-risk patients, and sometimes surgery. Long-term management may include lifestyle changes and careful monitoring.</p>
+            <p>Prevention includes staying active, using blood-thinning medications when indicated, avoiding smoking, and early medical evaluation after surgeries or long flights to prevent recurrence.</p>
+            <button class="btn">Read More</button>
+        </div>
 
-    <!-- Disease 9 -->
-    <div class="disease">
-      <h2>9. Pulmonary Hypertension</h2>
-      <h3>Anatomy:</h3>
-      <p>High blood pressure in pulmonary arteries.</p>
-      <h3>Symptoms:</h3>
-      <p>Shortness of breath, fatigue.</p>
-      <h3>Causes:</h3>
-      <p>Genetics, heart or lung disease.</p>
-      <h3>Treatment:</h3>
-      <p>Vasodilators, oxygen therapy.</p>
-    </div>
+        <!-- Disease 37: Pulmonary Arteriovenous Malformation (PAVM) -->
+        <div class="card">
+            <h3>Pulmonary Arteriovenous Malformation (PAVM)</h3>
+            <p>PAVM is an abnormal connection between pulmonary arteries and veins, bypassing normal lung tissue and causing oxygen-poor blood to enter circulation. Symptoms include shortness of breath, fatigue, cyanosis, headaches, and sometimes bleeding in lungs.</p>
+            <p>Diagnosis is made using imaging like CT angiography and contrast echocardiography. Early detection prevents complications like stroke or brain abscess.</p>
+            <p>Treatment includes embolization procedures to block abnormal vessels, surgery in some cases, and monitoring oxygen levels. Long-term follow-up is necessary to prevent recurrence.</p>
+            <p>Prevention is limited due to congenital nature. Awareness, regular medical follow-up, and timely intervention reduce risk of severe complications.</p>
+            <button class="btn">Read More</button>
+        </div>
 
-    <!-- Disease 10 -->
-    <div class="disease">
-      <h2>10. Asbestosis</h2>
-      <h3>Anatomy:</h3>
-      <p>Fibrosis of alveoli due to asbestos fibers.</p>
-      <h3>Symptoms:</h3>
-      <p>Breathlessness, cough, chest tightness.</p>
-      <h3>Causes:</h3>
-      <p>Inhalation of asbestos fibers.</p>
-      <h3>Treatment:</h3>
-      <p>Oxygen therapy, avoid exposure.</p>
-    </div>
+        <!-- Disease 38: Pulmonary Lymphoma -->
+        <div class="card">
+            <h3>Pulmonary Lymphoma</h3>
+            <p>Pulmonary lymphoma is a rare cancer originating in the lymphatic tissue of the lungs. Symptoms include persistent cough, chest pain, shortness of breath, fatigue, and sometimes fever or weight loss. Risk factors include immunodeficiency and chronic inflammation.</p>
+            <p>Diagnosis involves imaging, tissue biopsy, and laboratory tests to determine lymphoma type and stage. Early diagnosis is essential for effective treatment.</p>
+            <p>Treatment depends on lymphoma type and may include chemotherapy, radiation therapy, immunotherapy, and sometimes surgery. Close monitoring is required during and after treatment.</p>
+            <p>Prevention is limited due to unknown causes. Maintaining overall immune health and early detection improve outcomes and survival rates.</p>
+            <button class="btn">Read More</button>
+        </div>
 
-    <!-- 🔽 Main 11 to 32 Diseases -->
-    <div class="disease"><h2>11. Tuberculosis</h2><h3>Anatomy:</h3><p>Affects alveoli and lung tissue.</p><h3>Symptoms:</h3><p>Coughing blood, fever, night sweats.</p><h3>Causes:</h3><p>Mycobacterium tuberculosis infection.</p><h3>Treatment:</h3><p>Antibiotics (6–9 months).</p></div>
+        <!-- Disease 39: Pulmonary Blastoma -->
+        <div class="card">
+            <h3>Pulmonary Blastoma</h3>
+            <p>Pulmonary blastoma is a rare lung tumor resembling embryonic lung tissue, affecting both children and adults. Symptoms include cough, chest pain, hemoptysis (coughing blood), shortness of breath, and weight loss. Diagnosis involves imaging, biopsy, and histopathological examination.</p>
+            <p>Treatment includes surgical resection of the tumor, chemotherapy, and sometimes radiotherapy. Prognosis depends on tumor type, size, and stage at diagnosis.</p>
+            <p>Prevention is limited due to rarity and unknown causes. Early detection, timely surgical intervention, and follow-up care are essential to improve survival and quality of life.</p>
+            <button class="btn">Read More</button>
+        </div>
 
-    <div class="disease"><h2>12. Pneumonia</h2><h3>Anatomy:</h3><p>Inflammation of alveoli filled with pus.</p><h3>Symptoms:</h3><p>Fever, cough, chest pain.</p><h3>Causes:</h3><p>Bacterial, viral, fungal infection.</p><h3>Treatment:</h3><p>Antibiotics, antivirals, oxygen.</p></div>
+        <!-- Disease 40: Respiratory Distress Syndrome (Neonatal) -->
+        <div class="card">
+            <h3>Respiratory Distress Syndrome (Neonatal)</h3>
+            <p>Neonatal Respiratory Distress Syndrome occurs in premature infants due to insufficient surfactant in the lungs,
 
-    <div class="disease"><h2>13. Emphysema</h2><h3>Anatomy:</h3><p>Alveolar walls damaged and enlarged.</p><h3>Symptoms:</h3><p>Breathlessness, chronic cough.</p><h3>Causes:</h3><p>Smoking, pollution.</p><h3>Treatment:</h3><p>Bronchodilators, oxygen.</p></div>
+<!-- AdSense Example -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6232723421189435"
+     data-ad-slot="8159797596"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-    <div class="disease"><h2>14. Acute Bronchitis</h2><h3>Anatomy:</h3><p>Inflammation of bronchial tubes.</p><h3>Symptoms:</h3><p>Cough with mucus, chest discomfort.</p><h3>Causes:</h3><p>Viral infection.</p><h3>Treatment:</h3><p>Rest, fluids, cough medicines.</p></div>
+<!-- Lungs Anatomy Section -->
+<section id="anatomy">
+<h2>Lungs Anatomy</h2>
+<div class="grid">
+<div class="card">
+<h3>Overview</h3>
+<p>The lungs are the primary organs of respiration, responsible for gas exchange. Right lung has 3 lobes, left lung has 2 lobes. Covered by pleura for frictionless movement.</p>
+</div>
+<div class="card">
+<h3>Bronchi & Bronchioles</h3>
+<p>Air travels through bronchi into bronchioles and alveoli. Smooth muscles allow constriction/dilation for oxygen demand.</p>
+</div>
+<div class="card">
+<h3>Alveoli</h3>
+<p>Tiny sacs where oxygen enters blood and CO₂ exits. Surfactant reduces surface tension, preventing collapse.</p>
+</div>
+<div class="card">
+<h3>Pleura</h3>
+<p>Double-layered membrane (visceral & parietal) secretes fluid to reduce friction during breathing.</p>
+</div>
+</div>
+</section>
 
-    <div class="disease"><h2>15. Chronic Bronchitis</h2><h3>Anatomy:</h3><p>Thickened bronchial lining with excess mucus.</p><h3>Symptoms:</h3><p>Persistent productive cough.</p><h3>Causes:</h3><p>Smoking, irritants.</p><h3>Treatment:</h3><p>Bronchodilators, lifestyle changes.</p></div>
+<!-- Match Your Disease Section -->
+<section id="match-disease">
+<h2>Match Your Disease</h2>
+<p>Select symptoms to find possible lung diseases:</p>
+<form id="symptom-form">
+<label><input type="checkbox" name="symptom" value="cough"> Persistent Cough</label><br>
+<label><input type="checkbox" name="symptom" value="shortness"> Shortness of Breath</label><br>
+<label><input type="checkbox" name="symptom" value="wheezing"> Wheezing</label><br>
+<label><input type="checkbox" name="symptom" value="chest"> Chest Pain/Tightness</label><br>
+<label><input type="checkbox" name="symptom" value="fever"> Fever</label><br>
+<label><input type="checkbox" name="symptom" value="fatigue"> Fatigue</label><br><br>
+<button type="button" class="btn" onclick="matchDisease()">Match Disease</button>
+</form>
 
-    <div class="disease"><h2>16. Pulmonary Edema</h2><h3>Anatomy:</h3><p>Fluid accumulation in alveoli.</p><h3>Symptoms:</h3><p>Severe breathlessness, pink sputum.</p><h3>Causes:</h3><p>Heart failure, trauma.</p><h3>Treatment:</h3><p>Oxygen, diuretics.</p></div>
+<div id="match-result" style="margin-top:20px; padding:10px; background:#e8f4ff; border-radius:10px;"></div>
 
-    <div class="disease"><h2>17. Pneumothorax</h2><h3>Anatomy:</h3><p>Air in pleural space causing lung collapse.</p><h3>Symptoms:</h3><p>Sudden chest pain, dyspnea.</p><h3>Causes:</h3><p>Injury, ruptured bleb.</p><h3>Treatment:</h3><p>Chest tube drainage.</p></div>
+<script>
+const diseases = [
+{name:'Asthma', symptoms:['cough','shortness','wheezing','chest']},
+{name:'Pneumonia', symptoms:['cough','fever','shortness','chest']},
+{name:'Bronchitis', symptoms:['cough','shortness','chest','fatigue']},
+{name:'COVID-19', symptoms:['cough','fever','shortness','fatigue']},
+{name:'Tuberculosis', symptoms:['cough','fever','fatigue','chest']}
+// Add all 40 diseases mapping here
+];
+function matchDisease(){
+let checked = Array.from(document.querySelectorAll('input[name="symptom"]:checked')).map(cb=>cb.value);
+let matched = diseases.filter(d=>checked.every(sym=>d.symptoms.includes(sym)));
+let resultDiv = document.getElementById('match-result');
+if(matched.length>0){
+resultDiv.innerHTML = '<h3>Possible Diseases:</h3><ul>' + matched.map(d=>' <li>'+d.name+'</li>').join('') + '</ul>';
+}else{
+resultDiv.innerHTML = '<p>No matching disease found. Please consult a doctor.</p>';
+}
+}
+</script>
 
-    <div class="disease"><h2>18. Silicosis</h2><h3>Anatomy:</h3><p>Scarring in alveoli from silica dust.</p><h3>Symptoms:</h3><p>Breathing difficulty, fatigue.</p><h3>Causes:</h3><p>Occupational dust exposure.</p><h3>Treatment:</h3><p>Oxygen, avoid exposure.</p></div>
+<!-- Health Tips Section -->
+<section id="health-tips">
+<h2>Lung Health Tips</h2>
+<div class="grid">
+<div class="card">
+<h3>Keep Lungs Healthy</h3>
+<p>Exercise regularly, avoid smoking, eat antioxidant-rich foods, practice breathing exercises.</p>
+</div>
+<div class="card">
+<h3>Effects of Smoking</h3>
+<p>Smoking causes chronic bronchitis, emphysema, lung cancer. Quitting improves lung function.</p>
+</div>
+<div class="card">
+<h3>Foods That Improve Lung Health</h3>
+<p>Fruits, vegetables, nuts, fatty fish, vitamins C & E support lung tissue and reduce inflammation.</p>
+</div>
+<div class="card">
+<h3>Best Exercises for Strong Lungs</h3>
+<p>Cardio, swimming, cycling, yoga strengthen respiratory muscles and improve endurance.</p>
+</div>
+</div>
+</section>
 
-    <div class="disease"><h2>19. Hypersensitivity Pneumonitis</h2><h3>Anatomy:</h3><p>Inflammation of alveoli due to immune response.</p><h3>Symptoms:</h3><p>Cough, chills, shortness of breath.</p><h3>Causes:</h3><p>Allergens, dust, molds.</p><h3>Treatment:</h3><p>Avoid triggers, steroids.</p></div>
+<!-- FAQ Section -->
+<section id="faq">
+<h2>Frequently Asked Questions</h2>
+<div class="grid">
+<div class="card">
+<h3>What is Asthma?</h3>
+<p>Asthma is a chronic airway inflammation causing wheezing, coughing, and difficulty breathing.</p>
+</div>
+<div class="card">
+<h3>Is Lung Cancer Curable?</h3>
+<p>Early detection improves treatment options including surgery, chemotherapy, and targeted therapy.</p>
+</div>
+<div class="card">
+<h3>Can Pollution Damage Lungs?</h3>
+<p>Long-term exposure increases risk of respiratory diseases and worsens asthma.</p>
+</div>
+</div>
+</section>
 
-    <div class="disease"><h2>20. ARDS (Acute Respiratory Distress Syndrome)</h2><h3>Anatomy:</h3><p>Alveolar damage and fluid leakage.</p><h3>Symptoms:</h3><p>Severe shortness of breath.</p><h3>Causes:</h3><p>Sepsis, trauma, pneumonia.</p><h3>Treatment:</h3><p>Ventilation, oxygen.</p></div>
+<!-- Blog Section -->
+<section id="blog">
+<h2>Informative Articles</h2>
+<div class="grid">
+<div class="card">
+<h3>Top 5 Lung Diseases in Children</h3>
+<p>Asthma, bronchiolitis, pneumonia, cystic fibrosis, RSV infections explained with symptoms and treatment.</p>
+</div>
+<div class="card">
+<h3>How COVID-19 Affects Lungs</h3>
+<p>COVID-19 can cause pneumonia, ARDS, and long-term lung damage. Vaccination improves outcomes.</p>
+</div>
+<div class="card">
+<h3>Difference Between Asthma and Bronchitis</h3>
+<p>Asthma is chronic airway inflammation; bronchitis is temporary airway inflammation. Both need different management.</p>
+</div>
+</div>
+</section>
 
-    <div class="disease"><h2>21. Pulmonary Fibrosis</h2><h3>Anatomy:</h3><p>Fibrous scarring in alveolar walls.</p><h3>Symptoms:</h3><p>Dry cough, breathlessness.</p><h3>Causes:</h3><p>Unknown, toxins, autoimmune.</p><h3>Treatment:</h3><p>Anti-fibrotic drugs.</p></div>
+<!-- AdSense Auto Relaxed Unit -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-6232723421189435"
+     data-ad-slot="7824755673"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
-    <div class="disease"><h2>22. Bronchiectasis</h2><h3>Anatomy:</h3><p>Permanent dilation of bronchi.</p><h3>Symptoms:</h3><p>Productive cough, frequent infections.</p><h3>Causes:</h3><p>Cystic fibrosis, TB.</p><h3>Treatment:</h3><p>Airway clearance, antibiotics.</p></div>
+<!-- Footer -->
+<footer>
+    <a href="about.html">About</a> | 
+    <a href="privacy.html">Privacy Policy</a> | 
+    <a href="terms.html">Terms</a> | 
+    <a href="contact.html">Contact</a>
+</footer>
 
-    <div class="disease"><h2>23. Whooping Cough (Pertussis)</h2><h3>Anatomy:</h3><p>Infection of bronchioles.</p><h3>Symptoms:</h3><p>Severe coughing fits.</p><h3>Causes:</h3><p>Bordetella pertussis bacteria.</p><h3>Treatment:</h3><p>Antibiotics, vaccines.</p></div>
-
-    <div class="disease"><h2>24. Hantavirus Pulmonary Syndrome</h2><h3>Anatomy:</h3><p>Damage to alveoli and capillaries.</p><h3>Symptoms:</h3><p>Fever, muscle aches, respiratory failure.</p><h3>Causes:</h3><p>Hantavirus (rodent-borne).</p><h3>Treatment:</h3><p>Supportive care, oxygen.</p></div>
-
-    <div class="disease"><h2>25. Influenza (Flu)</h2><h3>Anatomy:</h3><p>Inflammation of trachea, bronchi, alveoli.</p><h3>Symptoms:</h3><p>Fever, cough, body aches.</p><h3>Causes:</h3><p>Influenza virus.</p><h3>Treatment:</h3><p>Rest, antivirals.</p></div>
-
-    <div class="disease"><h2>26. COVID-19 Pneumonia</h2><h3>Anatomy:</h3><p>Alveolar inflammation and clotting.</p><h3>Symptoms:</h3><p>Cough, fever, loss of smell, breathlessness.</p><h3>Causes:</h3><p>SARS-CoV-2 virus.</p><h3>Treatment:</h3><p>Supportive care, antivirals, oxygen.</p></div>
-
-    <div class="disease"><h2>27. Legionnaires’ Disease</h2><h3>Anatomy:</h3><p>Infection of alveoli by Legionella bacteria.</p><h3>Symptoms:</h3><p>Fever, chills, cough.</p><h3>Causes:</h3><p>Legionella-contaminated water.</p><h3>Treatment:</h3><p>Antibiotics.</p></div>
-
-    <div class="disease"><h2>28. Histoplasmosis</h2><h3>Anatomy:</h3><p>Fungal infection in alveoli.</p><h3>Symptoms:</h3><p>Fever, cough, chest pain.</p><h3>Causes:</h3><p>Histoplasma capsulatum fungus.</p><h3>Treatment:</h3><p>Antifungal drugs.</p></div>
-
-    <div class="disease"><h2>29. Pulmonary Alveolar Proteinosis</h2><h3>Anatomy:</h3><p>Alveoli filled with protein-rich fluid.</p><h3>Symptoms:</h3><p>Breathlessness, fatigue.</p><h3>Causes:</h3><p>Autoimmune disorder.</p><h3>Treatment:</h3><p>Whole lung lavage.</p></div>
-
-    <div class="disease"><h2>30. Bronchiolitis</h2><h3>Anatomy:</h3><p>Inflammation of small bronchioles.</p><h3>Symptoms:</h3><p>Wheezing, cough, difficulty breathing.</p><h3>Causes:</h3><p>RSV virus in infants.</p><h3>Treatment:</h3><p>Supportive care, oxygen.</p></div>
-
-    <div class="disease"><h2>31. Cryptogenic Organizing Pneumonia</h2><h3>Anatomy:</h3><p>Alveolar sacs filled with granulation tissue.</p><h3>Symptoms:</h3><p>Persistent cough, fever, breathlessness.</p><h3>Causes:</h3><p>Unknown, autoimmune.</p><h3>Treatment:</h3><p>Steroids.</p></div>
-
-    <div class="disease"><h2>32. Respiratory Syncytial Virus (RSV) Infection</h2><h3>Anatomy:</h3><p>Affects bronchioles and alveoli in infants.</p><h3>Symptoms:</h3><p>Coughing, wheezing, difficulty breathing.</p><h3>Causes:</h3><p>Viral infection.</p><h3>Treatment:</h3><p>Supportive care, antivirals in severe cases.</p></div>
-
-  </div>
-  <footer>
-    &
+</body>
+  </html>
