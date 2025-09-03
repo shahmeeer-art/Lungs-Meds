@@ -573,10 +573,10 @@ const diseases = [
 ];
 function matchDisease(){
 let checked = Array.from(document.querySelectorAll('input[name="symptom"]:checked')).map(cb=>cb.value);
-let matched = diseases.filter(d=>checked.every(sym=>d.symptoms.includes(sym)));
+let matched = diseases.filter(d=>checked.some(sym=>d.symptoms.includes(sym)));
 let resultDiv = document.getElementById('match-result');
 if(matched.length>0){
-resultDiv.innerHTML = '<h3>Possible Diseases:</h3><ul>' + matched.map(d=>' <li>'+d.name+'</li>').join('') + '</ul>';
+resultDiv.innerHTML = '<h3>Possible Diseases:</h3><ul>' + matched.map(d=>'<li>'+d.name+'</li>').join('') + '</ul>';
 }else{
 resultDiv.innerHTML = '<p>No matching disease found. Please consult a doctor.</p>';
 }
