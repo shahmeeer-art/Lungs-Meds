@@ -42,6 +42,41 @@ tr:hover {background:#f1f1f1;}
 <a href="#blog">Blog</a>
 </nav>
 
+<head>  
+  <meta charset="UTF-8">  
+  <title>Image Gallery</title>  
+  <style>  
+    body {  
+      font-family: Arial, sans-serif;  
+      text-align: center;  
+      background: #f9f9f9;  
+      margin: 0;  
+      padding: 20px;  
+    }  
+    h2 {  
+      margin-bottom: 20px;  
+    }  
+    .gallery {  
+      display: grid;  
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
+      gap: 15px;  
+      max-width: 1000px;  
+      margin: auto;  
+    }  
+    .gallery img {  
+      width: 100%;  
+      border-radius: 12px;  
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);  
+      transition: transform 0.3s;  
+    }  
+    .gallery img:hover {  
+      transform: scale(1.05);  
+    }  
+  </style>  
+</head>  
+<body>  
+  <h2>My Gallery</h2>  
+  <div class="gallery">
 <img src="img1.jpeg" alt="Image 1">
 <!-- Home / Diseases Section -->
 <section id="home">
